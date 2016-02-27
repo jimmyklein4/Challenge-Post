@@ -1,6 +1,7 @@
 package org.tudev.challengepost;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 /**
@@ -14,8 +15,10 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.login_activity);
     }
 
-    //TODO: Add link to login button
-    public void loginPressed(){
+    //TODO: Handle Login Properly
+    public void sendLogin(){
 
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }
