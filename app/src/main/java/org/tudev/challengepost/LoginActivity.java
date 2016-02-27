@@ -3,6 +3,7 @@ package org.tudev.challengepost;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 /**
  * Created by jimmyklein on 2/27/16.
@@ -16,9 +17,10 @@ public class LoginActivity extends Activity {
     }
 
     //TODO: Handle Login Properly
-    public void sendLogin(){
+    public void sendLogin(View view){
 
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }
