@@ -18,9 +18,13 @@ public class LoginActivity extends Activity {
 
     //TODO: Handle Login Properly
     public void sendLogin(View view){
-
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void sendRegister(View view){
+        Intent rIntent = new Intent(this, RegistrationActivity.class);
+        startActivity(rIntent);
     }
 }
