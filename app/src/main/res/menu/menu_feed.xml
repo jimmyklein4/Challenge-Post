@@ -5,6 +5,5 @@
     <item
         android:title="@string/challenges"
         android:id="@+id/menu_challenges"
-        android:icon="@android:drawable/ic_menu_compass"
         app:showAsAction="always"/>
 </menu>

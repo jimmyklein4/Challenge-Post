@@ -6,6 +6,6 @@
     <item
         android:title="@string/feed"
         android:id="@+id/menu_feed"
-        android:icon="@android:drawable/ic_menu_camera"
         app:showAsAction="always"/>
+
 </menu>
