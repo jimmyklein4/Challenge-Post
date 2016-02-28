@@ -10,28 +10,63 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
-    <EditText android:id="@+id/edit_username"
-        android:layout_weight="0.37"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_username"
-        android:textAlignment="center" />
-    <EditText android:id="@+id/edit_password"
-        android:layout_weight="0.38"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:layout_marginBottom="40dp"
+        android:text="Create Account"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:hint="@string/edit_password"
-        android:autoText="false"
-        android:textAlignment="center" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Create Username"/>
+        <EditText
+            android:id="@+id/edit_username"
+            android:layout_weight="0.37"
+            android:singleLine="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_username"
+            android:textAlignment="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Create Password"/>
+        <EditText
+            android:id="@+id/edit_password"
+            android:singleLine="true"
+            android:layout_weight="0.38"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:hint="@string/edit_password"
+            android:inputType="textPassword"
+            android:textAlignment="center" />
+    </LinearLayout>
+
     <Button android:id="@+id/button_register"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="@string/button_register"
+        android:paddingBottom="40dp"
         android:onClick="sendRegister"
         android:textAlignment="center"
+        android:gravity="bottom"
         style="?android:attr/borderlessButtonStyle"/>
 </LinearLayout>

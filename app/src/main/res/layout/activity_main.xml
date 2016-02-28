@@ -17,6 +17,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
         android:textSize="20sp"
         android:textStyle="bold"
         android:text="@string/challenges"/>
@@ -24,6 +27,8 @@
         android:id="@+id/listChallenges"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_weight="1"
         android:drawSelectorOnTop="false" />
 

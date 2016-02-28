@@ -16,7 +16,7 @@ import android.widget.ListView;
  */
 public class FeedView extends AppCompatActivity {
 
-    private String[] feed = {"Feed1","Feed2","Feed3","Feed4","Feed5"};
+    private String[] feed = {"Friend 1 is a meme","Friend 2 is a sport","More memes","Other stuff","Feed5"};
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_DISCRIPTION = "org.tudev.challengepost.DISCRIPTION";
 
     //TODO: Get these values from the server
-    private String[] challenges = {"Challenge1","Challenge2","Challenge3", "Challenge4","Challenge5"};
+    private String[] challenges = {"Feed A Cat","Buy 1000 sporks","Enter a hackathon", "Make mistakes","Become a meme"};
     private ListView challengeListView;
     private ArrayAdapter challengeAdapter;
 

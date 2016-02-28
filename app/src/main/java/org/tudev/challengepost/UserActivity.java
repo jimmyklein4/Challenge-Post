@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
  */
 public class UserActivity extends AppCompatActivity {
 
+    //TODO: Populate and update the information
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

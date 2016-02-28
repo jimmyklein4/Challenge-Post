@@ -40,7 +40,7 @@ public class LoginActivity extends Activity {
         }
     }
 
-    public void sendRegister(View view){
+    public void sendRegisterAction(View view){
         Intent rIntent = new Intent(this, RegistrationActivity.class);
         startActivity(rIntent);
         finish();
