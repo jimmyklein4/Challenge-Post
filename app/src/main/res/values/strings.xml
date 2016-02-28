@@ -12,4 +12,6 @@
 
     <string name="fullname">FullName</string>
     <string name="username">Username</string>
+    <string name="challenges">Challenges</string>
+    <string name="feed">Friend Updates</string>
 </resources>
