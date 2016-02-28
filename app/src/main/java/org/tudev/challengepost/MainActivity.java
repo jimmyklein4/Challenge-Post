@@ -1,5 +1,6 @@
 package org.tudev.challengepost;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -14,8 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //TODO: Get these values from the server
-    private String[] challenges = {"Challenge1","Challenge2","Challenge3"};
-    private String[] feed = {"Feed1","Feed2","Feed3"};
+    private String[] challenges = {"Challenge1","Challenge2","Challenge3", "Challenge4","Challenge5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,17 +25,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ArrayAdapter challengeAdapter = new ArrayAdapter<>(this, R.layout.challenge_listview, challenges);
-        ArrayAdapter feedAdapter = new ArrayAdapter<>(this, R.layout.feed_listview, feed);
 
         ListView challengeListView = (ListView) findViewById(R.id.listChallenges);
-        ListView feedListView = (ListView) findViewById(R.id.listFeed);
 
 
         challengeListView.setAdapter(challengeAdapter);
-        feedListView.setAdapter(feedAdapter);
 
         challengeListView.setOnItemClickListener(challengeClickListener);
-        feedListView.setOnItemClickListener(feedClickListener);
     }
 
     @Override
@@ -51,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-
-
+        if(R.id.menu_feed==id) {
+            Intent intent = new Intent(this, FeedView.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -66,10 +62,5 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private AdapterView.OnItemClickListener feedClickListener = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            //TODO: Should move into a view of the user
-        }
-    };
+
 }

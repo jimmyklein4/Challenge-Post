@@ -26,6 +26,10 @@
             android:name=".RegistrationActivity"
             android:label="@string/register">
         </activity>
+        <activity android:name=".FeedView"
+            android:label="@string/feed">
+
+        </activity>
     </application>
 
 </manifest>
