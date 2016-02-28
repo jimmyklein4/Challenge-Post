@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         if(R.id.menu_feed==id) {
             Intent intent = new Intent(this, FeedView.class);
             startActivity(intent);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

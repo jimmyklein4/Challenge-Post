@@ -19,7 +19,7 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/main_page">
+            android:label="@string/challenges">
         </activity>
 
         <activity

@@ -2,10 +2,9 @@
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <item
-        android:title="@string/feed"
-        android:id="@+id/menu_feed"
-        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/challenges"
+        android:id="@+id/menu_challenges"
+        android:icon="@android:drawable/ic_menu_compass"
         app:showAsAction="always"/>
 </menu>
