@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -24,8 +27,11 @@ public class MainActivity extends Activity {
         ListView challengeListView = (ListView) findViewById(R.id.listChallenges);
         ListView feedListView = (ListView) findViewById(R.id.listFeed);
 
+
         challengeListView.setAdapter(challengeAdapter);
         feedListView.setAdapter(feedAdapter);
+
+        challengeListView.setOnItemClickListener(challengeClickListener);
     }
 
     @Override
@@ -49,4 +55,11 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private AdapterView.OnItemClickListener challengeClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            Toast.makeText(MainActivity.this, position+"",Toast.LENGTH_LONG).show();
+        }
+    };
 }
