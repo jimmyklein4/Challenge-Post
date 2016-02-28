@@ -14,8 +14,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static String EXTRA_DISCRIPTION = "org.tudev.challengepost.DISCRIPTION";
+
     //TODO: Get these values from the server
     private String[] challenges = {"Challenge1","Challenge2","Challenge3", "Challenge4","Challenge5"};
+    private ListView challengeListView;
+    private ArrayAdapter challengeAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
-        ArrayAdapter challengeAdapter = new ArrayAdapter<>(this, R.layout.challenge_listview, challenges);
+        challengeAdapter = new ArrayAdapter<>(this, R.layout.challenge_listview, challenges);
 
-        ListView challengeListView = (ListView) findViewById(R.id.listChallenges);
+        challengeListView = (ListView) findViewById(R.id.listChallenges);
 
 
         challengeListView.setAdapter(challengeAdapter);
@@ -59,7 +63,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             //TODO: Should move into a view of the challenge
-            Toast.makeText(MainActivity.this, position+"",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(MainActivity.this,  ChallengeItemView.class);
+            intent.putExtra(EXTRA_DISCRIPTION,challengeAdapter.getItem(position).toString());
+            startActivity(intent);
+
+
+            //Toast.makeText(MainActivity.this, challengeAdapter.getItem(position).toString() ,Toast.LENGTH_LONG).show();
         }
     };
 
