@@ -24,5 +24,4 @@
         android:onClick="sendRegister"
         android:textAlignment="center"
         style="?android:attr/borderlessButtonStyle"/>
-
 </LinearLayout>
