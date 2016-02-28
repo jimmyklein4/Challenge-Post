@@ -10,4 +10,6 @@
     <string name="button_register">Register</string>
     <string name="button_login">Login</string>
 
+    <string name="fullname">FullName</string>
+    <string name="username">Username</string>
 </resources>
