@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
         feedListView.setAdapter(feedAdapter);
 
         challengeListView.setOnItemClickListener(challengeClickListener);
+        feedListView.setOnItemClickListener(feedClickListener);
     }
 
     @Override
@@ -59,7 +60,15 @@ public class MainActivity extends Activity {
     private AdapterView.OnItemClickListener challengeClickListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            //TODO: Should move into a view of the challenge
             Toast.makeText(MainActivity.this, position+"",Toast.LENGTH_LONG).show();
+        }
+    };
+
+    private AdapterView.OnItemClickListener feedClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            //TODO: Should move into a view of the user
         }
     };
 }
