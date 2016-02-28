@@ -18,17 +18,17 @@
         android:hint="@string/edit_password"
         android:autoText="false"
         android:textAlignment="center" />
+    <Button android:id="@+id/button_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_login"
+        android:onClick="sendLogin"
+        style="?android:attr/borderlessButtonStyle"/>
     <Button android:id="@+id/button_register"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/button_register"
         android:onClick="sendRegister"
         android:textAlignment="center"
-        style="?android:attr/borderlessButtonStyle"/>
-    <Button android:id="@+id/button_login"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/button_login"
-        android:onClick="sendLogin"
         style="?android:attr/borderlessButtonStyle"/>
 </LinearLayout>
