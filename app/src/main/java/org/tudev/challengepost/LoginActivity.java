@@ -31,7 +31,7 @@ public class LoginActivity extends Activity {
 
     //TODO: Handle Login Properly
     public void sendLogin(View view){
-        if((username.getText()!=null || password.getText()!=null)) {
+        if(!(username.getText().toString().matches("") || password.getText().toString().matches(""))) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();

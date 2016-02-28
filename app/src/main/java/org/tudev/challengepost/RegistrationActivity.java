@@ -28,7 +28,7 @@ public class RegistrationActivity extends Activity {
     }
 
     public void sendRegister(View view){
-        if(!(username.getText()==null || password.getText()==null)){
+        if(!(username.getText().toString().matches("") || password.getText().toString().matches(""))){
             //TODO: Send registration to server
             Intent intent = new Intent(this, LoginActivity.class);
             intent.putExtra(EXTRA_USERNAME, username.getText().toString());
