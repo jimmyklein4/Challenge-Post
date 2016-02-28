@@ -8,6 +8,8 @@ import android.os.Bundle;
  */
 public class RegistrationActivity extends Activity {
 
+    //TODO: Implement registration
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
