@@ -1,9 +1,9 @@
 package org.tudev.challengepost;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -25,7 +25,7 @@ public class ChallengeItemView extends AppCompatActivity {
 
     }
 
-    private void challengeCompleted(){
+    public void challengeCompleted(View view){
         //TODO: Add the fact that you finished into your profile
         finish();
     }

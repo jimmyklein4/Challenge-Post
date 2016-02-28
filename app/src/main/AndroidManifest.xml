@@ -35,6 +35,10 @@
         <activity android:name=".ChallengeItemView"
             android:label="@string/challege_discription">
         </activity>
+
+        <activity android:name=".UserActivity"
+            android:label="@string/username">
+        </activity>
     </application>
 
 </manifest>

@@ -51,10 +51,14 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if(R.id.menu_feed==id) {
+        if(id==R.id.menu_feed) {
             Intent intent = new Intent(this, FeedView.class);
             startActivity(intent);
             finish();
+        }
+        if(id==R.id.menu_user){
+            Intent intent = new Intent(this, UserActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             //TODO: Should move into a view of the challenge
             Intent intent = new Intent(MainActivity.this,  ChallengeItemView.class);
-            intent.putExtra(EXTRA_DISCRIPTION,challengeAdapter.getItem(position).toString());
+            intent.putExtra(EXTRA_DISCRIPTION, challengeAdapter.getItem(position).toString());
             startActivity(intent);
 
 
